@@ -28,8 +28,16 @@ The objective of this tutorial is to demonstrate how to leverage publicly availa
 - Survival Analysis: Perform survival analysis on genes of interest, such as CCN1 and FOS, by classifying samples into high and low expression groups based on median expression levels.
 - Kaplan-Meier Plots: Visualize survival differences between high and low expression groups using Kaplan-Meier survival curves and assess statistical significance.
 
-## Result: Survival Plot for the CCN1 gene
+## Result: 
+
+**Survival Plot for the CCN1 gene**
+
 ![Rplot](https://github.com/ananyakaushik20/Survival-Analysis/assets/85845284/82195d07-3710-41f0-bf17-fe598ef33d1a)
+
+**Survival Plot for the FOS gene**
+
+![Rplot_fos_2](https://github.com/ananyakaushik20/Survival-Analysis-Colorectal-Cancer/assets/85845284/f3045bb7-d17b-4623-bdd8-d0588df18a04)
+
 
 ## Conclusion
 This project demonstrates the integration of bioinformatics tools and statistical methods to investigate the prognostic significance of gene expression in colorectal cancer. By following this R script, we can replicate the analysis for other genes and cancer types, contributing to the identification of potential biomarkers and therapeutic targets.
