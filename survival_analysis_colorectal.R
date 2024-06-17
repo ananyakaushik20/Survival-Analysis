@@ -98,26 +98,18 @@ coad_ccn1$case_id <- gsub('-01.*','', coad_ccn1$case_id)
 coad_ccn1 <- merge(coad_ccn1, clinical_COAD, by.x = 'case_id', by.y = 'submitter_id')
 
 
-#fitting survival curve------
+#fitting survival curve--------
 fit <- survfit(Surv(overall_survival, deceased) ~ strata, data = coad_ccn1)
 fit
 
 #plot the curve
-ggsurvplot(fit,
+survminer::ggsurvplot(fit,
            data = coad_ccn1,
            pval = T,
            risk.table = T)
 
 
-fit2 <- survdiff(Surv(overall_survival, deceased) ~ strata, data = coad_ccn1)
-fit2
-
-ggsurvplot(fit2,
-           data = coad_ccn1,
-           pval = T,
-           risk.table = T)
-
-# Define a function for the survival analysis and plotting------
+# Define a function for the survival analysis and plotting of any gene------
 plot_survival_analysis <- function(data, gene_name) {
   # Get median value
   median_value <- median(data$counts)
@@ -133,13 +125,18 @@ plot_survival_analysis <- function(data, gene_name) {
   fit <- survfit(Surv(overall_survival, deceased) ~ strata, data = data)
   
   # Plot the curve
-  ggsurvplot(fit, data = data, pval = TRUE, risk.table = TRUE)
+  plot <- ggsurvplot(fit, 
+                     data = data, 
+                     pval = TRUE, 
+                     risk.table = TRUE,
+                     risk.table.col = "strata")
+  
+  return(plot)
 }
 
+#PLOT FOR FOS gene-----
 
-#plot survival curve for FOS gene or any other gene-------
-
-#get count matrix for FOS gene and perform survival analysis using the function above
+# Assuming 'coad_fos' is the returned plot object from function call
 coad_fos <- coad_matrix_vst %>% 
   as.data.frame() %>% 
   rownames_to_column(var = 'gene_id') %>% 
@@ -148,7 +145,5 @@ coad_fos <- coad_matrix_vst %>%
   filter(gene_name == "FOS") %>%
   plot_survival_analysis(gene_name = "FOS")
 
-
-
-
-
+#view the plot
+print(coad_fos)
