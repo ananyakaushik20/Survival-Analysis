@@ -1,7 +1,7 @@
 # Survival-Analysis
 
 ## Overview
-This demo provides a comprehensive guide to performing survival analysis using gene expression data from The Cancer Genome Atlas (TCGA) for colorectal cancer (COAD). The focus is on extracting, preprocessing, and modeling survival data to investigate the prognostic significance of specific genes such as CCN1 and FOS.
+This demo provides a comprehensive guide to performing survival analysis using gene expression data from The Cancer Genome Atlas (TCGA) for colorectal cancer (COAD). The focus is on extracting, preprocessing, and modeling survival data to investigate the prognostic significance of specific genes such as *CCN1* and *FOS*.
 
 ## Objective
 The objective of this tutorial is to demonstrate how to leverage publicly available TCGA data for survival analysis, identify key genes associated with patient outcomes, and visualize the results to understand their potential clinical relevance.
@@ -13,7 +13,7 @@ The objective of this tutorial is to demonstrate how to leverage publicly availa
 - Visualization: Generate Kaplan-Meier survival curves to visualize differences in survival between high and low expression groups of specific genes.
 
 ## Data Sources
-TCGA-COAD: Clinical data and RNA-Seq gene expression data for colorectal cancer patients, obtained from the [TCGA database](https://portal.gdc.cancer.gov/projects/TCGA-COAD)
+*TCGA-COAD*: Clinical data and RNA-Seq gene expression data for **Colorectal Cancer** patients, obtained from the [TCGA database](https://portal.gdc.cancer.gov/projects/TCGA-COAD)
 
 ## Tools and Packages
 - TCGAbiolinks: For querying and downloading TCGA data.
