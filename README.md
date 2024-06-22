@@ -6,6 +6,13 @@ This demo provides a comprehensive guide to performing survival analysis using g
 ## Objective
 The objective of this tutorial is to demonstrate how to leverage publicly available TCGA data for survival analysis, identify key genes associated with patient outcomes, and visualize the results to understand their potential clinical relevance.
 
+This project demonstrated how to:
+
+-Work with complex biomedical data from TCGA
+-Implement data preprocessing and DGE analysis techniques
+-Apply survival analysis methods like Kaplan-Meier and Cox regression
+-Create a modular, reproducible R script for survival analysis of any gene
+
 ## Key Steps
 - Data Retrieval: Learn how to query and download clinical and gene expression data for colorectal cancer from the TCGA database using R.
 - Data Preprocessing: Understand the process of normalizing and transforming RNA-Seq data to prepare it for analysis.
