@@ -8,10 +8,10 @@ The objective of this tutorial is to demonstrate how to leverage publicly availa
 
 This project demonstrated how to:
 
--Work with complex biomedical data from TCGA
--Implement data preprocessing and DGE analysis techniques
--Apply survival analysis methods like Kaplan-Meier and Cox regression
--Create a modular, reproducible R script for survival analysis of any gene
+- Work with complex biomedical data from TCGA
+- Implement data preprocessing and DGE analysis techniques
+- Apply survival analysis methods like Kaplan-Meier and Cox regression
+- Create a modular, reproducible R script for survival analysis of any gene
 
 ## Key Steps
 - Data Retrieval: Learn how to query and download clinical and gene expression data for colorectal cancer from the TCGA database using R.
